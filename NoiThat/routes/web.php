@@ -14,9 +14,9 @@ use Illuminate\Support\Facades\Route;
 */
 
 //Route::get('/', function () {
-//    return view('index');
+//    return view('welcome');
 //});
-
-Route::get('/',[\App\Http\Controllers\IndexController::class,'view']);
-Route::post('index',[\App\Http\Controllers\IndexController::class,'store'])->name('store');
-
+Route::get('/',[\App\Http\Controllers\NoiThatController::class,'index']);
+Route::post('index',[\App\Http\Controllers\NoiThatController::class,'wareHouse'])->name('store');
+Route::post('/',[\App\Http\Controllers\NoiThatController::class,'index'])->name('index');
+Route::get('/',[\App\Http\Controllers\NoiThatController::class,'getDashboard']);
